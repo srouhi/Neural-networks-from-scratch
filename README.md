@@ -67,6 +67,8 @@ Trains deep neural networks on the MNIST and Fashion-MNIST datasets using **Tens
 
 ---
 
-## Author Notes
+**Shay - Shaghayegh Rouhi**  
+Data Science, Machine Learning, AI  
+[LinkedIn](https://www.linkedin.com/in/Shay-shaghayegh-rouhi-aba3892a1) | [Email](mailto:Shaghayegh.rouhi.sr@gmail.com)
 
 
