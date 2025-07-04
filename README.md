@@ -25,9 +25,9 @@ Trains deep neural networks on the MNIST and Fashion-MNIST datasets using **Tens
 
 ## Datasets Used
 
-- 🏠 **Lincoln Home Sales**: Structured data (CSV) with 16 features + price.
-- ✍️ **MNIST**: Handwritten digit classification (0–9)
-- 👗 **Fashion MNIST**: 10-class clothing image dataset
+- **Lincoln Home Sales**: Structured data (CSV) with 16 features + price.
+- **MNIST**: Handwritten digit classification (0–9)
+- **Fashion MNIST**: 10-class clothing image dataset
 
 ---
 
