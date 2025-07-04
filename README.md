@@ -1,4 +1,3 @@
-# neural-networks-from-scratch
 # Neural Networks From Scratch & With TensorFlow
 
 This repository contains two related machine learning projects focused on training feedforward neural networks (FNNs) for both regression and classification tasks.
