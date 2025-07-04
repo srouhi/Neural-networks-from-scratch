@@ -1,73 +1,56 @@
-# Neural Networks From Scratch & With TensorFlow
+# TensorFlow vs NumPy Performance and MNIST Classification
 
-This repository contains two related machine learning projects focused on training feedforward neural networks (FNNs) for both regression and classification tasks.
+This project explores the performance difference between TensorFlow and NumPy for vector operations and implements two feedforward neural networks using TensorFlow on the MNIST and Fashion MNIST datasets.
+
+---
+
+## Features
+
+- **Performance Comparison**: Compare element-wise vector multiplication through TensorFlow vs NumPy with timing benchmarks.
+- **Tensor Operations**: Perform matrix operations using TensorFlow.
+- **Tensor <-> NumPy Conversion**: Demonstrate how to convert between TensorFlow tensors and NumPy arrays.
+- **MNIST Digit Classification**: Train a simple neural network on MNIST.
+- **Fashion MNIST Classification**: Train a deeper neural network on the Fashion MNIST dataset to achieve >90% accuracy.
 
 ---
 
 ## Project Structure
 
-### `home_price_regression/`
-Implements a feedforward neural network **from scratch in NumPy** to predict house prices based on real estate features from Lincoln, Nebraska.
-
-- ReLU activation and Mean Squared Error loss
-- Custom backpropagation and training loop
-- Mini-batch Stochastic Gradient Descent (SGD)
-
-### `mnist_fashion_classification/`
-Trains deep neural networks on the MNIST and Fashion-MNIST datasets using **TensorFlow/Keras**.
-
-- Uses ReLU + Softmax activation layers
-- Compares optimizers: SGD vs Adam
-- Monitors validation loss to avoid overfitting
+```bash
+tensorflow-vs-numpy-perf-mnist/
+├── notebook.ipynb           # Jupyter Notebook version (recommended for walkthrough + visuals)
+├── script.py                # Python script version of the project
+├── README.md                # Project overview and usage
+└── requirements.txt         # Python dependencies (optional but recommended)
+```
 
 ---
 
-## Datasets Used
+## Model Architectures
 
-- **Lincoln Home Sales**: Structured data (CSV) with 16 features + price.
-- **MNIST**: Handwritten digit classification (0–9)
-- **Fashion MNIST**: 10-class clothing image dataset
+### MNIST Model
+- `784 → 100 → 10`
+- Activation: ReLU in hidden, Softmax in output
+- Loss: MSE
+- Optimizer: SGD
 
----
-
-## Sample Results
-
-| Task | Dataset | Final Accuracy |
-|------|---------|----------------|
-| Regression | Lincoln Home Sales | ~85% near-accurate within tolerance |
-| Classification | MNIST | ~98.2% (Adam) |
-| Classification | Fashion MNIST | ~89.4% (Adam, 7 epochs) |
-
----
-
-## 🛠Technologies Used
-
-- Python
-- NumPy (for from-scratch FNN)
-- TensorFlow & Keras (for MNIST/Fashion)
-- Matplotlib (for visualizations)
+### Fashion MNIST Model
+- `784 → 128 → 64 → 32 → 10`
+- Activation: ReLU (all hidden), Softmax (output)
+- Optimizer: SGD
+- Loss: MSE
+- Epochs: 300
+- **Final Training Accuracy**: ~92.3%
 
 ---
 
-## How to Run
+## Sample Visualizations
 
-1. Clone the repository.
-2. Open each `.ipynb` in Jupyter or VS Code.
-3. For `home_price_nn.ipynb`, make sure `LincolnHomeSales.csv` is in the same folder.
-4. Run all cells sequentially to see the training process.
+The project displays the first few images in both MNIST and Fashion MNIST, along with their labels using `matplotlib`.
 
 ---
-
-## Learnings
-
-- Implementing neural networks from scratch deepened understanding of forward/backward passes.
-- Loss functions and optimizer choices have significant effects on convergence.
-- Validation loss is essential to detect overfitting.
-
----
+## Author
 
 **Shay - Shaghayegh Rouhi**  
-Data Science, Machine Learning, AI  
-[LinkedIn](https://www.linkedin.com/in/Shay-shaghayegh-rouhi-aba3892a1) | [Email](mailto:Shaghayegh.rouhi.sr@gmail.com)
-
-
+Data Science | AI/ML Development | NLP Applications  
+[LinkedIn Profile](https://www.linkedin.com/in/Shay-shaghayegh-rouhi-aba3892a1)
